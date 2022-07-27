@@ -1,5 +1,6 @@
 import './App.css';
 import './style/general.style.css'
+import "./style/colorPalette.style.css"
 import SingleProduct from './component/mainComponent.component/SingleProduct.component';
 import Cart from './component/mainCart.component/mainCart.component';
 import * as data from "./data/products"
@@ -12,7 +13,7 @@ function App() {
         } else {
             setCartVisibility(true)
         }
-    }
+    } // handles cart visibility (passed as props to skip redux )
 
     return (
         <div className="App">

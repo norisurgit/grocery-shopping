@@ -1,36 +1,45 @@
+@import "./style/colorPalette.style.css";
+
 .App {
     display: grid;
     grid-template-columns: [first] 48px [line1] auto [end];
     grid-template-rows: [first] 48px [line1] auto [end];
+    height: 100%;
+    width: 100%;
 }
+
 
 .header {
     grid-column-start: first;
-    grid-column-end: line1;
+    grid-column-end: end;
     grid-row-start: first;
-    grid-row-end: end;
-    background-color: aqua;
+    grid-row-end: line1;
+    background-color: var(--white);
+    box-shadow: 0 0 4px var(--grey);
+
 }
 
 .mainBody {
-    grid-column-start: line1;
+    grid-column-start: first;
     grid-column-end: end;
-    grid-row-start: first;
+    grid-row-start: line1;
     grid-row-end: end;
+    background-color: var(--background);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
+
     .header {
         grid-column-start: first;
-        grid-column-end: end;
+        grid-column-end: line1;
         grid-row-start: first;
-        grid-row-end: line1;
+        grid-row-end: end;
     }
 
     .mainBody {
-        grid-column-start: first;
+        grid-column-start: line1;
         grid-column-end: end;
-        grid-row-start: line1;
+        grid-row-start: first;
         grid-row-end: end;
     }
 }

@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch } from "react-redux"
-import "./quantityAndHandlers.component.css"
+import "./quantityAndHandlers.component.style.css"
 const QuantityAndHandlers = (props) => {
     // +/- button will dispatch state change
     const quantityDispatcher = useDispatch()
     return (
         <div className='parentHolder'>
+            <span>quanity: </span>
             <div className='actionButton substract'
                 onClick={() => quantityDispatcher({
                     type: "QNT_CHANGE_LESS",

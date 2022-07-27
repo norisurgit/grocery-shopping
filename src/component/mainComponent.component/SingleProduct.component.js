@@ -1,5 +1,5 @@
 import React from 'react'
-import "./SingleProduct.component.css"
+import "./SingleProduct.component.style.css"
 import * as numberFn from "../../functions/numbers.functions"
 import { useDispatch } from "react-redux"
 
