@@ -1,20 +1,29 @@
 import React, { useState } from 'react'
+import { useDispatch } from "react-redux"
 import "./quantityAndHandlers.component.css"
 const QuantityAndHandlers = (props) => {
-    // requires prop : quantity
-    const [quantity, setQuantity] = useState(props.quantity)
+    // +/- button will dispatch state change
+    const quantityDispatcher = useDispatch()
     return (
         <div className='parentHolder'>
             <div className='actionButton substract'
-                onClick={() => setQuantity(prevQuantity => prevQuantity > 1 ? prevQuantity - 1 : 1)}
+                onClick={() => quantityDispatcher({
+                    type: "QNT_CHANGE_LESS",
+                    payload: { productID: props.data.product }
+                })
+                }
             >
                 -
             </div>
             <div className='quanity'>
-                {quantity}
+                {props.data.quantity}
             </div>
             <div className='actionButton add'
-                onClick={() => setQuantity(prevQuantity => prevQuantity + 1)}
+                onClick={() => quantityDispatcher({
+                    type: "QNT_CHANGE_MORE",
+                    payload: { productID: props.data.product }
+                }
+                )}
             >
                 +
             </div>
