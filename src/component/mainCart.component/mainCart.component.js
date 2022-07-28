@@ -28,12 +28,15 @@ const Cart = (props) => {
 
     return (
         <div className='mainCartHolder' ref={cartMainHolder}>
-            <span className="material-symbols-outlined isButton" onClick={props.changeCartVisibility}>
+            <span className="material-symbols-outlined isButton title" onClick={props.changeCartVisibility}>
                 close
             </span>
             <div className='cartElementsHolder'>
                 <span className='title'>
-                    products
+                    cart
+                    <span className="material-symbols-outlined">
+                        shopping_cart
+                    </span>
                 </span>
                 {
                     basketData.map((e, i) => {
@@ -47,17 +50,17 @@ const Cart = (props) => {
             </div>
             <div className='orderSummary'>
 
-                <div className='oneFlex'>
-                    <span>Subtotal</span>
-                    <span>{roundAndShowTwoDecimals(cartSubtotal)}</span>
+                <div className='oneFlex tabHolderLine'>
+                    <span className='cartOptionsTitle'>Subtotal</span>
+                    <span className='cartOptionsData'>{roundAndShowTwoDecimals(cartSubtotal)}</span>
                 </div>
-                <div className='oneFlex'>
-                    <span>Discount</span>
-                    <span>{roundAndShowTwoDecimals(cartDiscount)}</span>
+                <div className='oneFlex tabHolderLine'>
+                    <span className='cartOptionsTitle'>Discount</span>
+                    <span className='cartOptionsData'>{roundAndShowTwoDecimals(cartDiscount)}</span>
                 </div>
-                <div className='oneFlex'>
-                    <span>Total</span>
-                    <span>{roundAndShowTwoDecimals(cartTotal)}</span>
+                <div className='oneFlex tabHolderLine'>
+                    <span className='cartOptionsTitle'>Total</span>
+                    <span className='cartOptionsData'>{roundAndShowTwoDecimals(cartTotal)}</span>
                 </div>
             </div>
         </div>

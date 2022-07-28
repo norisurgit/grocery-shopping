@@ -6,7 +6,7 @@ const QuantityAndHandlers = (props) => {
     const quantityDispatcher = useDispatch()
     return (
         <div className='parentHolder'>
-            <span>quanity: </span>
+            <span className='textQuantity'>quanity: </span>
             <div className='actionButton substract'
                 onClick={() => quantityDispatcher({
                     type: "QNT_CHANGE_LESS",
@@ -16,7 +16,7 @@ const QuantityAndHandlers = (props) => {
             >
                 -
             </div>
-            <div className='quanity'>
+            <div className='cartElementQuantity'>
                 {props.data.quantity}
             </div>
             <div className='actionButton add'

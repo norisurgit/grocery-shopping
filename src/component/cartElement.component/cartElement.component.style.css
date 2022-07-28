@@ -10,25 +10,57 @@
 }
 
 .twoFlex {
-    flex-grow: 2;
+    flex: 2 0 40%;
 }
 
 .oneFlex {
-    flex-grow: 1;
+    flex: 1 0 30%;
 }
 
 .productCartImage {
-    max-width: 180px;
-    max-height: 100px;
+    width: 80px;
+    height: 80px;
     border: solid 2px #ccc;
     border-radius: 1000px;
+    padding: var(--one-size);
 }
 
 .titleAndQuantity {
     flex-direction: column;
 }
 
+.cartElementTitle {
+    font-size: var(--large-size);
+    font-weight: bold;
+}
+
 .oldPrice {
-    color: red;
+    display: flex;
+    color: var(--red);
+    font-size: var(--three-size);
+    font-weight: bold;
     text-decoration: line-through;
+    align-items: flex-end;
+}
+
+.newPrice {
+    color: var(--text);
+    font-size: var(--three-size);
+    font-weight: bold;
+
+}
+
+.pricesHolder {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media only screen and (min-width: 600px) {
+    .productCartImage {
+        padding: var(--two-size);
+        width: 100px;
+        height: 100px;
+    }
 }

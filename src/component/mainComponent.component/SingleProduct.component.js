@@ -44,7 +44,7 @@ const SingleProductMarket = (props) => {
                         {props.product.description}
                     </div>
                     <div className='singleProductSingleColumn productPrice'>
-                        {`£${numberFn.roundAndShowTwoDecimals(props.product.price)}`}
+                        {`${numberFn.roundAndShowTwoDecimals(props.product.price)}`}
                     </div>
                 </div>
                 <div className='singleProductSubholderSingleLine'>

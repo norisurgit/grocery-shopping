@@ -7,8 +7,13 @@
     position: fixed;
     top: 0;
     -webkit-transition: right .2s .2s ease;
+    -moz-transition: right .2s .2s ease;
+    -ms-transition: right .2s .2s ease;
+    -o-transition: right .2s .2s ease;
+    transition: right .2s .2s ease;
     backdrop-filter: blur(16px);
-    overflow: scroll;
+    overflow-y: scroll;
+    z-index: 5;
 
 }
 
@@ -18,4 +23,27 @@
 
 .visibleCart {
     right: 0;
+}
+
+.tabHolderLine {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--two-size);
+    margin-right: var(--two-size);
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.cartOptionsTitle {
+    display: flex;
+    font-size: var(--two-size);
+    color: var(--black-grey);
+    font-weight: bold;
+}
+
+.cartOptionsData {
+    display: flex;
+    font-size: var(--three-size);
+    color: var(--text);
+    font-weight: bold;
 }

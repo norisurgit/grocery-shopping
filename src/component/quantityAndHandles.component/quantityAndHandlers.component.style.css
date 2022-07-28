@@ -9,14 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: var(--two-size);
     font-weight: bold;
-    padding: 8px;
-    background-color: #111;
-    color: #fff;
-    box-sizing: border-box;
+    background-color: var(--white);
+    border: solid 2px var(--grey);
+    border-radius: 1000px;
+    color: var(--text);
     margin: 8px;
     cursor: pointer;
+    font-size: var(--three-size);
+    width: var(--three-size);
+    height: var(--three-size);
 }
 
 .actionButton::selection,
@@ -25,9 +28,17 @@
     color: unset;
 }
 
-.quanity {
+.cartElementQuantity {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: default;
+    font-size: var(--three-size);
+    font-weight: bold;
+}
+
+.textQuantity {
+    font-size: var(--two-size);
+    font-weight: bold;
+    color: var(--black-grey);
 }

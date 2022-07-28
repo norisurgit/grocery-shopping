@@ -8,19 +8,18 @@ const CartElement = (props) => {
     return (
         <div className="mainElement">
             <div className="childElement oneFlex">
-                <img src={productData.imgSrc} alt="hey" className="productCartImage" />
+                <img src={productData.imgSrc} alt=" " className="productCartImage" />
             </div>
-            <div className="childElement twoFlex titleAndQuantity" >
-                <div className=" oneFlex">
+            <div className="childElement twoFlex titleAndQuantity">
+                <div className=" oneFlex cartElementTitle">
                     {productData.title}
                 </div>
                 <div className="oneFlex">
                     <QuantityAndHandlers data={props.numbersData} />
                 </div>
             </div>
-            <div className="childElement oneFlex">
+            <div className="childElement oneFlex pricesHolder">
                 <div className="oneFlex oldPrice">
-
                     {
                         productData.price * props.numbersData.quantity > props.modifiedBasketData.wholePrice ?
                             roundAndShowTwoDecimals(productData.price * props.numbersData.quantity)

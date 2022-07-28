@@ -1,4 +1,4 @@
-@import "./style/colorPalette.style.css";
+@import "./style/general.style.css";
 
 .App {
     display: grid;
@@ -6,6 +6,7 @@
     grid-template-rows: [first] 48px [line1] auto [end];
     height: 100%;
     width: 100%;
+    color: var(--text);
 }
 
 
@@ -15,7 +16,11 @@
     grid-row-start: first;
     grid-row-end: line1;
     background-color: var(--white);
-    box-shadow: 0 0 4px var(--grey);
+    box-shadow: 0 0 8px var(--white-grey);
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -24,7 +29,8 @@
     grid-column-end: end;
     grid-row-start: line1;
     grid-row-end: end;
-    background-color: var(--background);
+    background-color: var(--white);
+    z-index: 3;
 }
 
 @media only screen and (min-width: 600px) {
